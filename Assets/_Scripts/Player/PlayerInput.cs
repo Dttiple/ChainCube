@@ -1,9 +1,13 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
 public class PlayerInput : MonoBehaviour, IDragHandler, IPointerClickHandler
 {
+
+    public int RainbowCost = 300;
+    public int BombCost = 600;
     [Inject]
     private Player player;
     [Inject(Id = "PlayerCubeAnchor")]
@@ -36,8 +40,21 @@ public class PlayerInput : MonoBehaviour, IDragHandler, IPointerClickHandler
     {
         player.TryShoot();
     }
-    public void SwitchCubeTo(int cube)
+
+    public void ScoreSubtrackRainbow(int cube)
     {
-        player.SwitchCubeTo((ECube)cube);
+        if (player.CurrentScore.Value >= RainbowCost) 
+        { 
+            player.CurrentScore.Value -= RainbowCost;
+            player.SwitchCubeTo((ECube)cube);
+        }
+    }
+    public void ScoreSubtrackBomb(int cube)
+    {
+        if (player.CurrentScore.Value >= BombCost)
+        {
+            player.CurrentScore.Value -= BombCost;
+            player.SwitchCubeTo((ECube)cube);
+        }
     }
 }

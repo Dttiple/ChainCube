@@ -1,7 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 public class Rainbow : CubeCollideEffect
 {
+    [Inject]
+    private Player player;
+    public int points = 300;
     public override void OnTriggerEnter(Cube cube, Collider other)
     {
         if (!cube.IsInGame)
@@ -22,4 +27,5 @@ public class Rainbow : CubeCollideEffect
             cube.gameObject.SetActive(false);
         }
     }
+
 }

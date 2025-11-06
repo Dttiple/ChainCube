@@ -2,7 +2,8 @@
 
 [CreateAssetMenu(menuName = "GameSettings")]
 public class GameSettings : ScriptableObject
-{
+{   
+
     public int PunchForce;
     public int UpForce;
     public float SpreadForce;
@@ -11,4 +12,5 @@ public class GameSettings : ScriptableObject
     [Space]
     public float CubeReloadTime;
     public float Sensitivity;
+
 }

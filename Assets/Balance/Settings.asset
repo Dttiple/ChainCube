@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Settings
   m_EditorClassIdentifier: 
   PunchForce: 400
-  UpForce: 6
+  UpForce: 4
   SpreadForce: 0
   CubeBoard: 1.55
   CubeReloadTime: 1
