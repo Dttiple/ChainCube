@@ -890,7 +890,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &419409761
@@ -1783,11 +1783,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336495845154900338, guid: 2dc0041c8463da94fb7af3add9757bf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2336495845154900338, guid: 2dc0041c8463da94fb7af3add9757bf0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2336495845154900338, guid: 2dc0041c8463da94fb7af3add9757bf0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1868,6 +1868,8 @@ MonoBehaviour:
   placement:
   - {fileID: 11400000, guid: d1228bc6ddb86b243baa3738ef34162b, type: 2}
   - {fileID: 11400000, guid: cf5f5f296b54dda4a9f84a343246cac2, type: 2}
+  - {fileID: 11400000, guid: f3df2d4c02bb01e49897a51144b1c382, type: 2}
+  - {fileID: 11400000, guid: f27bb6e3611effd4ba48b56a3f5fcbb1, type: 2}
 --- !u!4 &862530839
 Transform:
   m_ObjectHideFlags: 0
@@ -2687,7 +2689,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 10, z: 1}
+  m_Size: {x: 1, y: 220, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
 --- !u!23 &1244965058
 MeshRenderer:
@@ -3238,7 +3240,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999976, y: 10, z: 1}
+  m_Size: {x: 0.99999976, y: 220, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
 --- !u!23 &1476784981
 MeshRenderer:
@@ -3646,7 +3648,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 10, z: 1}
+  m_Size: {x: 1, y: 220, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
 --- !u!23 &1872094692
 MeshRenderer:
