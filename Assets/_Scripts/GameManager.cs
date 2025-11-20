@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private InitialPlacement[] placement;
-
     [Inject]
     private CubeFactoryWithPool factory;
     [Inject]
@@ -68,4 +67,6 @@ public class GameManager : MonoBehaviour
         Cube.OnMerge -= WinCheck;
         player.OnLose -= LoseGame;
     }
+
+
 }

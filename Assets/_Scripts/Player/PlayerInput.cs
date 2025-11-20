@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Zenject;
 
 public class PlayerInput : MonoBehaviour, IDragHandler, IPointerClickHandler
@@ -8,6 +9,8 @@ public class PlayerInput : MonoBehaviour, IDragHandler, IPointerClickHandler
 
     public int RainbowCost = 300;
     public int BombCost = 600;
+
+    public TextMeshProUGUI text;
     [Inject]
     private Player player;
     [Inject(Id = "PlayerCubeAnchor")]
@@ -47,6 +50,11 @@ public class PlayerInput : MonoBehaviour, IDragHandler, IPointerClickHandler
         { 
             player.CurrentScore.Value -= RainbowCost;
             player.SwitchCubeTo((ECube)cube);
+        }else
+        {
+            text.gameObject.SetActive(true);
+            text.GetComponent<TextMeshProUGUI>().CrossFadeAlpha(0, .5f, false);
+            text.gameObject.SetActive(false);
         }
     }
     public void ScoreSubtrackBomb(int cube)
